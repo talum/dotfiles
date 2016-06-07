@@ -1,0 +1,54 @@
+#!/bin/bash
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/.dotfiles
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our bash files
+shopt -s extglob
+config_files=("$DOTFILES/**/*.bash")
+path_files=()
+completion_files=()
+other_files=()
+
+for file in ${config_files}
+do
+  if [[ $file == *"path.bash"* ]]
+  then
+    path_files+=($file)
+  elif [[ $file == *"completion.bash"* ]]
+  then
+    completion_files+=($file)
+  else
+    other_files+=($file)
+  fi
+done
+
+# load the path files
+for file in ${path_files[@]}
+do
+  source $file
+done
+
+# load everything but the path and completion files
+for file in ${other_files[@]}
+do
+  source $file
+done
+
+# load every completion after autocomplete loads
+for file in ${completion_files[@]}
+do
+  source $file
+done
+
+unset config_files
+unset path_files
+unset completion_files
+unset other_files
