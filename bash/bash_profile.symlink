@@ -52,3 +52,4 @@ unset config_files
 unset path_files
 unset completion_files
 unset other_files
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
