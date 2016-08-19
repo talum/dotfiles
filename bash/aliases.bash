@@ -8,3 +8,7 @@ alias migrate='rake db:migrate && rake db:migrate RAILS_ENV=test'
 
 alias l='ls -a'
 alias desktop='cd /Users/$USER/Desktop/$@'
+
+#Pubkey
+
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

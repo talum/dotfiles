@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"BlameHighlighter",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Jade",
+		"Markdown Preview",
+		"Ruby Slim",
+		"SideBarEnhancements",
+		"SublimeLinter"
+	]
+}
