@@ -18,10 +18,14 @@ set shiftwidth=4   " shift 4 spaces
 
 set textwidth=76
 set wildmenu
-set mouse=a	       " allow mousse
+set mouse=a	       " allow mouse
 set cursorline     " highlights/underlines current line
 set ruler	       " shows cursor position
 
 set background=dark
 set t_Co=256
 colorscheme molokai
+
+filetype on         "enable filetype detection
+filetype plugin on  "enable filetype-specific plugins
+filetype plugin indent on " fix indenting of # comments
