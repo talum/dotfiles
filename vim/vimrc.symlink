@@ -13,15 +13,14 @@ set ignorecase
 set smartindent
 set autoindent     " open lines at same indentation
 set expandtab      " turn tabs into tabstop spaces
-set tabstop=4	   " 1 tab = 4 spaces
-set shiftwidth=4   " shift 4 spaces 
+set tabstop=2      " 1 tab = 2 spaces
+set shiftwidth=2   " shift 2 spaces
 
 set textwidth=76
 set wildmenu
 set mouse=a	       " allow mouse
 set cursorline     " highlights/underlines current line
 set ruler	       " shows cursor position
-
 set background=dark
 set t_Co=256
 colorscheme molokai
@@ -29,3 +28,37 @@ colorscheme molokai
 filetype on         "enable filetype detection
 filetype plugin on  "enable filetype-specific plugins
 filetype plugin indent on " fix indenting of # comments
+
+" some mappings
+map <C-N> <esc>:NERDTreeToggle<CR>
+nmap <space> zz
+nmap <C-H> <C-W>h
+nmap <C-L> <C-W>l
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-P> <C-W>k
+"Note that <CR> is used for ENTER
+imap <leader>wq <esc>:wq<CR>
+
+" Quit all windows. Helpful esp. in Git Diff
+map <F2> <esc>:qall<CR>
+
+if &diff
+    colorscheme github
+endif
+
+" Toggle line wrapping.
+map <leader>w <esc>:set wrap!<CR>
+map <leader>e <esc>:set expandtab<CR>
+map <leader>ne <esc>:set noexpandtab<CR>
+map <leader>l <esc>:set list<CR>
+map <leader>nl <esc>:set nolist<CR>
+map <leader>f <esc>:NERDTreeFind<CR>
+nnoremap <leader>d <esc>:bd<cr>
+
+" Toggle cursorline
+map <leader>cl <esc>:set cursorline!<CR>
+
+" clear highlights
+nnoremap <SPACE> c <SPACE>:noh<CR>
+
