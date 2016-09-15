@@ -48,6 +48,11 @@ do
   source $file
 done
 
+# autocomplete bash for github
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+fi
+
 unset config_files
 unset path_files
 unset completion_files

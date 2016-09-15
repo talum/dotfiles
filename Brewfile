@@ -22,6 +22,8 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'youtube-dl'
+brew 'vim'
+brew 'bash-completion'
 
 cask '1password'
 cask 'adium'
