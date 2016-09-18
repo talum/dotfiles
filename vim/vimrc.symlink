@@ -29,6 +29,7 @@ filetype on         "enable filetype detection
 filetype plugin on  "enable filetype-specific plugins
 filetype plugin indent on " fix indenting of # comments
 
+let NERDTreeShowHidden=1 "show hidden files in tree
 " some mappings
 map <C-N> <esc>:NERDTreeToggle<CR>
 nmap <space> zz
