@@ -8,6 +8,7 @@ alias migrate='rake db:migrate && rake db:migrate RAILS_ENV=test'
 
 alias l='ls -a'
 alias desktop='cd /Users/$USER/Desktop/$@'
+alias ironboard='cd /Users/$USER/ironboard'
 
 #Pubkey
 
