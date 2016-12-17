@@ -2,21 +2,11 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
-
-If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
-
 ## topical
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
-files in there. Anything with an extension of `.zsh` will get automatically
+files in there. Anything with an extension of `.bash` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
@@ -34,11 +24,11 @@ There's a few special files in the hierarchy.
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
 - **Brewfile**: This is a list of applications for [Homebrew Cask](http://caskroom.io) to install: things like Chrome and 1Password and Adium and stuff. Might want to edit this file before running any initial setup.
-- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
+- **topic/\*.bash**: Any files ending in `.bash` get loaded into your
   environment.
-- **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
+- **topic/path.bash**: Any file named `path.bash` is loaded first and is
   expected to setup `$PATH` or similar.
-- **topic/completion.zsh**: Any file named `completion.zsh` is loaded
+- **topic/completion.bash**: Any file named `completion.bash` is loaded
   last and is expected to setup autocomplete.
 - **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
@@ -58,7 +48,7 @@ script/bootstrap
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
+The main file you'll want to change right off the bat is `bash/bashrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
 `dot` is a simple script that installs some dependencies, sets sane OS X
@@ -66,22 +56,43 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## bugs
+## Pathogen vim
+I use Pathogen.vim to manage plugins. The script is located in the `vim.symlink/autoload` directory. 
 
-I want this to work for everyone; that means when you clone it down it should
-work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
-something if I forget to make a check for a dependency.
+To activate Pathogen, make sure these lines are in the symlinked `.vimrc`:
+```
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+```
+I install plugins as submodules so that every plugin will be kept in its own
+git repository. To install another package, follow these steps: 
 
-If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
+`git submodule add /path/to/git/repo bundle/name-of-plugin`
+`git add .`
+`git commit -m "install package as submodule"`
 
-## thanks
+To install Vim environment on another machine: 
+- Clone down repo
+- cd to `.vim`
+- `git submodule init`
+- `git submodule update`
 
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.
+To upgrade plugin bundle:
+- cd to bundle directory
+- `git pull origin master`
+
+To upgrade all bundled plugins: 
+`git submodule foreach git pull origin master`
+
+## Sublime
+TODO: Write a script to handle the following
+
+All the Sublime Text user settings are stored in the `Packages/User`
+directory of the SUblime data folder. To install these settings on another
+machine, clone down the repo, dump the current packages in the install,
+something like `rm -rf ~/Library/Application\ Support/Sublime\ Text\
+2/Packages/User`.
+
+Then symlink the dotfiles. It should be something like this: ``ln -s
+~/.dotfiles/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\
+2/Packages/User``
