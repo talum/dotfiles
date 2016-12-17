@@ -6,15 +6,15 @@
 	"installed_packages":
 	[
 		"1337 Color Scheme",
+		"Babel",
 		"BlameHighlighter",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Jade",
 		"Markdown Preview",
+		"Package Control",
 		"Ruby Slim",
 		"SideBarEnhancements",
-		"SublimeLinter",
-    "Babel",
-    "Package Control"
+		"SublimeLinter"
 	]
 }
