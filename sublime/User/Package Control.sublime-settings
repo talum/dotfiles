@@ -7,15 +7,18 @@
 	[
 		"1337 Color Scheme",
 		"Babel",
+		"Babel Snippets",
 		"BlameHighlighter",
 		"BracketHighlighter",
 		"Color Highlighter",
+		"ERB Autocomplete",
 		"Jade",
 		"Markdown Preview",
 		"Package Control",
 		"Rails Developer Snippets",
 		"Ruby Slim",
 		"SideBarEnhancements",
+		"StandardFormat",
 		"SublimeLinter"
 	]
 }
