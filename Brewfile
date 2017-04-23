@@ -24,6 +24,7 @@ brew 'wget'
 brew 'youtube-dl'
 brew 'vim'
 brew 'bash-completion'
+brew 'tmux'
 
 cask '1password'
 cask 'adium'
