@@ -40,7 +40,7 @@ There's a few special files in the hierarchy.
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/talum/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -90,9 +90,7 @@ TODO: Write a script to handle the following
 All the Sublime Text user settings are stored in the `Packages/User`
 directory of the SUblime data folder. To install these settings on another
 machine, clone down the repo, dump the current packages in the install,
-something like `rm -rf ~/Library/Application\ Support/Sublime\ Text\
-2/Packages/User`.
+something like `rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`.
 
 Then symlink the dotfiles. It should be something like this: ``ln -s
-~/.dotfiles/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\
-2/Packages/User``
+~/.dotfiles/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/``
