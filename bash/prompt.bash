@@ -22,8 +22,9 @@
 
     #flatiron default
     # PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[32m\]\W\[\e[0m\]\n\[\e[0;31m\]$BLUE//$RED $CHAR \[\e[0m\]"
-    PS1="$PURPLE\u@\h$YELLOW\$(parse_git_branch) $GREEN\W\$RESET\n\[\e[0;31m\]$CYAN// 🍦  $RESET"
+    PS1="$PURPLE\u\h$YELLOW\$(parse_git_branch) $GREEN\W\$RESET\n\[\e[0;31m\]$CYAN// 🍦  $RESET"
     PS2='> '
     PS4='+ '
     }
   prompt
+

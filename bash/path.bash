@@ -16,6 +16,8 @@ export PATH="$MYSQL_PATH:$USR_PATHS:$PATH"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
+export PATH="$PATH:/usr/local/bin/elixir/bin"
+
 # RVM
   # Mandatory loading of RVM into the shell
   # This must be the last line of your bash_profile always
