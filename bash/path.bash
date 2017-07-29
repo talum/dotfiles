@@ -18,6 +18,12 @@ export PATH="$MYSQL_PATH:$USR_PATHS:$PATH"
 
 export PATH="$PATH:/usr/local/bin/elixir/bin"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # RVM
   # Mandatory loading of RVM into the shell
   # This must be the last line of your bash_profile always
