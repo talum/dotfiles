@@ -24,6 +24,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# add custom scripts
+export PATH=$HOME/bin:$PATH
+
 # RVM
   # Mandatory loading of RVM into the shell
   # This must be the last line of your bash_profile always
