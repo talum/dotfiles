@@ -12,6 +12,8 @@ alias ironboard='cd /Users/$USER/Development/ironboard'
 alias phe='cd /Users/$USER/Development/phoeyonce'
 alias dotfiles='cd /Users/$USER/.dotfiles'
 
+alias cssh='i2cssh -c'
+
 #Pubkey
 
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
