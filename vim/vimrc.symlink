@@ -63,3 +63,6 @@ map <leader>cl <esc>:set cursorline!<CR>
 " clear highlights
 nnoremap <SPACE> c <SPACE>:noh<CR>
 
+" ignore some files in ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,
+
