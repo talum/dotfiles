@@ -16,3 +16,9 @@
 [submodule "vim/vim.symlink/bundle/auto-pairs"]
 	path = vim/vim.symlink/bundle/auto-pairs
 	url = http://github.com/jiangmiao/auto-pairs.git
+[submodule "vim-elixir"]
+	path = vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/vim-elixir"]
+	path = vim/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
