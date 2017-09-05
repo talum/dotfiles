@@ -20,6 +20,7 @@ brew 'bash-completion'
 brew 'tmux'
 brew 'tree'
 brew 'watch'
+brew 'hub'
 
 cask '1password'
 cask 'adium'

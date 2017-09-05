@@ -17,3 +17,6 @@ alias cssh='i2cssh -c'
 #Pubkey
 
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# Hub
+alias git=hub
