@@ -7,10 +7,10 @@
   # Editors
   # Tells your shell that when a program requires various editors, use sublime.
   # The -w flag tells your shell to wait until sublime exits
-  export VISUAL="$EDITOR -w"
-  export SVN_EDITOR="$EDITOR -w"
-  export GIT_EDITOR="$EDITOR -w"
-  export EDITOR="$EDITOR -w"
+  export VISUAL="$EDITOR"
+  export SVN_EDITOR="$EDITOR"
+  export GIT_EDITOR="$EDITOR"
+  export EDITOR="$EDITOR"
 
   # Case-Insensitive Auto Completion
   bind "set completion-ignore-case on"
