@@ -22,3 +22,6 @@
 [submodule "vim/vim-elixir"]
 	path = vim/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/vim.symlink/bundle/ale"]
+	path = vim/vim.symlink/bundle/ale
+	url = https://github.com/w0rp/ale.git
