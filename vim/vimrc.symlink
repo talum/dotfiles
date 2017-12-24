@@ -3,7 +3,7 @@ syntax on
 
 filetype indent plugin on  " Wrap gitcommit file types at the appropriate length
 syntax enable      " syntax highlighting
-set number         " line numbering
+set number relativenumber " line numbering
 set vb             " flashes screen on errors
 set hlsearch       " highlight search terms
 set incsearch
