@@ -66,3 +66,21 @@ nnoremap <SPACE> c <SPACE>:noh<CR>
 " ignore some files in ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,
 
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup end
+
+"ale
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\  'jsx': ['eslint']
+\}
+
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\  'jsx': ['eslint']
+\}
+
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
