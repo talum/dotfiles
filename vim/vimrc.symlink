@@ -1,3 +1,5 @@
+let g:pathogen_disabled=['auto-pairs']
+
 execute pathogen#infect()
 syntax on
 
@@ -63,6 +65,9 @@ map <leader>cl <esc>:set cursorline!<CR>
 " clear highlights
 nnoremap <SPACE> c <SPACE>:noh<CR>
 
+"%:h expansion
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " ignore some files in ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,
 
@@ -84,3 +89,4 @@ let g:ale_fixers = {
 
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
+
