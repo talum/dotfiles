@@ -30,6 +30,7 @@ colorscheme molokai
 filetype on         "enable filetype detection
 filetype plugin on  "enable filetype-specific plugins
 filetype plugin indent on " fix indenting of # comments
+runtime macros/matchit.vim
 
 let NERDTreeShowHidden=1 "show hidden files in tree
 " some mappings
