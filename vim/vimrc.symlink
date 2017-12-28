@@ -71,11 +71,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " ignore some files in ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,
 
-augroup FiletypeGroup
-  autocmd!
-  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup end
-
 "ale
 let g:ale_linters = {
 \  'javascript': ['eslint'],
