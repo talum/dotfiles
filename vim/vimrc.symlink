@@ -89,3 +89,9 @@ let g:ale_fixers = {
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
 
+" ag for ack
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
