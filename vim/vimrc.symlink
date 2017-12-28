@@ -32,6 +32,9 @@ filetype plugin on  "enable filetype-specific plugins
 filetype plugin indent on " fix indenting of # comments
 runtime macros/matchit.vim
 
+" set pastetoggle
+set pastetoggle=<f5>
+
 let NERDTreeShowHidden=1 "show hidden files in tree
 " some mappings
 map <C-N> <esc>:NERDTreeToggle<CR>
