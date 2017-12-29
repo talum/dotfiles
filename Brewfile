@@ -22,6 +22,7 @@ brew 'tmux'
 brew 'tree'
 brew 'watch'
 brew 'hub'
+brew 'ctags'
 
 cask '1password'
 cask 'adium'
