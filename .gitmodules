@@ -46,3 +46,6 @@
 [submodule "vim/vim.symlink/bundle/vim-pug"]
 	path = vim/vim.symlink/bundle/vim-pug
 	url = git://github.com/digitaltoad/vim-pug.git
+[submodule "vim/vim.symlink/bundle/golden-ratio"]
+	path = vim/vim.symlink/bundle/golden-ratio
+	url = git://github.com/roman/golden-ratio.git
