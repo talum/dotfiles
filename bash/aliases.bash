@@ -20,3 +20,8 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 # Hub
 alias git=hub
+
+# Pip
+alias pip=pip3
+alias python=python3
+

@@ -26,8 +26,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # add custom scripts
 export PATH=$HOME/bin:$PATH
-
-# RVM
-  # Mandatory loading of RVM into the shell
-  # This must be the last line of your bash_profile always
-[[ -s "$HOME/.rvm/scripts/rvm" ]] &&  source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
