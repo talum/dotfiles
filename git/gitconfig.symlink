@@ -19,7 +19,7 @@
 [core]
         whitespace=fix, -indent-with-non-tab,trailing-space,cr-at-eol
         excludesfile = ~/.gitignore
-        editor = "subl -w" 
+        editor = "vim"
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -30,4 +30,4 @@
         autocorrect = 1
 [push]
         # See https://stackoverflow.com/questions/23918062/simple-vs-current-push-default-in-git-for-decentralized-workflow
-        default = current 
+        default = current
