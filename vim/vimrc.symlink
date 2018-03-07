@@ -1,3 +1,5 @@
+let g:pathogen_disabled=['auto-pairs']
+
 execute pathogen#infect()
 syntax on
 
@@ -78,12 +80,11 @@ nnoremap <SPACE> c <SPACE>:noh<CR>
 "%:h expansion
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" ignore some files in ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,*.beam
 
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$|node_modules\',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
@@ -99,8 +100,8 @@ let g:ale_fixers = {
 \}
 
 let g:ale_sign_column_always = 1
-let g:pathogen_disabled=['auto-pairs']
 let g:ale_fix_on_save = 1
+
 
 " ag for ack
 
