@@ -45,6 +45,7 @@ set pastetoggle=<f5>
 
 let NERDTreeShowHidden=1 "show hidden files in tree
 " some mappings
+let mapleader = ","
 map <C-N> <esc>:NERDTreeToggle<CR>
 nmap <space> zz
 nmap <C-H> <C-W>h
@@ -75,7 +76,8 @@ nnoremap <leader>d <esc>:bd<cr>
 map <leader>cl <esc>:set cursorline!<CR>
 
 " clear highlights
-nnoremap <SPACE> c <SPACE>:noh<CR>
+nnoremap <Leader><space> :nohlsearch<CR>
+
 
 "%:h expansion
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -100,7 +102,7 @@ let g:ale_fixers = {
 \}
 
 let g:ale_sign_column_always = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 
 " ag for ack
