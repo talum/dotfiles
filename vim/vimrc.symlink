@@ -5,7 +5,6 @@ syntax on
 
 filetype indent plugin on  " Wrap gitcommit file types at the appropriate length
 syntax enable      " syntax highlighting
-set number relativenumber " line numbering
 set vb             " flashes screen on errors
 set hlsearch       " highlight search terms
 set incsearch
@@ -89,6 +88,14 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$|node_modules\',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" add a cache for ctrlP
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+
+" delegate to ag if available
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 "ale
 let g:ale_linters = {
