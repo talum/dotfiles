@@ -11,10 +11,11 @@ alias desktop='cd /Users/$USER/Desktop/$@'
 alias ironboard='cd /Users/$USER/Development/ironboard'
 alias ib='cd /Users/$USER/Development/ironboard'
 alias phe='cd /Users/$USER/Development/phoeyonce'
+alias registrar='cd /Users/$USER/Development/registrar_umbrella'
 alias dev='cd /Users/$USER/Development'
 alias dotfiles='cd /Users/$USER/.dotfiles'
 alias cssh='i2cssh -c'
-alias dc='docker-compose'
+alias dc='docker-compose up'
 
 #Pubkey
 
