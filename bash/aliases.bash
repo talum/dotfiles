@@ -11,6 +11,7 @@ alias desktop='cd /Users/$USER/Desktop/$@'
 alias ironboard='cd /Users/$USER/Development/ironboard'
 alias phe='cd /Users/$USER/Development/phoeyonce'
 alias dotfiles='cd /Users/$USER/.dotfiles'
+alias registrar='cd /Users/$USER/Development/registrar_umbrella'
 
 alias cssh='i2cssh -c'
 

@@ -9,6 +9,8 @@ set vb             " flashes screen on errors
 set hlsearch       " highlight search terms
 set incsearch
 set ignorecase
+set number
+set tags=tags
 
 " indentation
 set smartindent
@@ -43,6 +45,7 @@ runtime macros/matchit.vim
 set pastetoggle=<f5>
 
 let NERDTreeShowHidden=1 "show hidden files in tree
+
 " some mappings
 let mapleader = ","
 map <C-N> <esc>:NERDTreeToggle<CR>
