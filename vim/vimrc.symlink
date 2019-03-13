@@ -84,11 +84,11 @@ nnoremap <Leader><space> :nohlsearch<CR>
 "%:h expansion
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,*.beam,*/_build
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/log/*,*/app/assets/javascripts/_bundles/*,*.beam,*/_build,*/deps/*
 
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$|node_modules\',
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$|node_modules\|deps\',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
