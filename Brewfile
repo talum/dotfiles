@@ -23,6 +23,8 @@ brew 'tree'
 brew 'watch'
 brew 'hub'
 brew 'ctags'
+brew 'fzf'
+brew 'tldr'
 
 cask '1password'
 cask 'adium'
