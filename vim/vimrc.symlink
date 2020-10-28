@@ -1,10 +1,9 @@
-let g:pathogen_disabled=['auto-pairs']
+let g:pathogen_disabled=['auto-pairs', 'YouCompleteMe']
 
 execute pathogen#infect()
 syntax on
 
-filetype indent plugin on  " Wrap gitcommit file types at the appropriate length
-syntax enable      " syntax highlighting
+filetype indent plugin on  " Wrap gitcommit file types at the appropriate length syntax enable      " syntax highlighting
 set vb             " flashes screen on errors
 set hlsearch       " highlight search terms
 set incsearch
@@ -27,6 +26,9 @@ set ruler	       " shows cursor position
 set background=dark
 set t_Co=256
 colorscheme molokai
+
+"es6
+autocmd BufNewFile,BufRead *.es6 set filetype=js
 
 " whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -121,10 +123,13 @@ let g:ale_fixers = {
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 0
 
+" While I'm at it, disable K to lookup man pages
+" " I never use it on purpose...
+nnoremap K <nop>
 
-" ag for ack
+" rg for ack
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --smart-case'
 endif
 
