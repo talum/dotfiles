@@ -100,13 +100,8 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " delegate to ag if available
 if executable('rg')
-	let g:ctrlp_user_command = 'rg %s -i --nocolor --nogroup --hidden
-				\ --ignore .git
-				\ --ignore .svn
-				\ --ignore .hg
-				\ --ignore .DS_Store
-				\ --ignore "**/*.pyc"
-				\ -g ""'
+  set grepprg=rg\ --color=never
+	let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 endif
 
 ""ale
