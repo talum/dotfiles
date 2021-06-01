@@ -26,3 +26,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # add custom scripts
 export PATH=$HOME/bin:$PATH
+export PATH=$DOTFILES/bin:$PATH
