@@ -61,7 +61,7 @@ call pathogen#helptags()
 I install plugins as submodules so that every plugin will be kept in its own
 git repository. To install another package, follow these steps:
 
-`git submodule add /path/to/git/repo bundle/name-of-plugin`
+`git submodule add /path/to/git/repo vim/vim.symlink/bundle/name-of-plugin`
 `git add .`
 `git commit -m "install package as submodule"`
 
