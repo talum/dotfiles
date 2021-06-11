@@ -46,3 +46,9 @@
 [submodule "vim/vim.symlink/bundle/golden-ratio"]
 	path = vim/vim.symlink/bundle/golden-ratio
 	url = git://github.com/roman/golden-ratio.git
+[submodule "vim/vim.symlink/bundle/vim-test"]
+	path = vim/vim.symlink/bundle/vim-test
+	url = https://github.com/vim-test/vim-test
+[submodule "vim/vim.symlink/bundle/vim-test-github"]
+	path = vim/vim.symlink/bundle/vim-test-github
+	url = https://github.com/bswinnerton/vim-test-github/
