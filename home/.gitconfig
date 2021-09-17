@@ -1,0 +1,35 @@
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
+[hub]
+        protocol = https
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        pr = pull --rebase
+        pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+        count   = !git shortlog -sn
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        whitespace=fix, -indent-with-non-tab,trailing-space,cr-at-eol
+        excludesfile = ~/.gitignore
+        editor = "vim"
+[pager]
+        branch = false
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See https://stackoverflow.com/questions/23918062/simple-vs-current-push-default-in-git-for-decentralized-workflow
+        default = current
