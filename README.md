@@ -1,2 +1,4 @@
 # dotfiles
-Dotfiles for Codespaces
+Dotfiles for Codespaces[^1]
+
+[^1]: Everyone loves Codespaces & Dotfiles
