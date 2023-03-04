@@ -9,3 +9,15 @@ vim -es -u ~/.vimrc +PlugInstall +qa
 
 ### Install ctags
 ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log .
+
+### Install oh-my-zsh
+if [ "$LOCAL" == TRUE ]
+  echo "Installing oh-my-zsh"
+  then sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+### Install tmux
+if [ "$LOCAL" == TRUE ]
+  echo "Installing tmux"
+  then brew install tmux
+fi
