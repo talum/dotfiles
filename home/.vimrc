@@ -12,6 +12,12 @@ Plug 'tpope/vim-sensible' "Sensible defaults
 Plug 'tpope/vim-surround' "Surround pairs
 Plug 'janko-m/vim-test' "Test
 Plug 'bswinnerton/vim-test-github' "Test @ GitHub
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 syntax on
