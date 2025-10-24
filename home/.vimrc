@@ -12,7 +12,7 @@ Plug 'tpope/vim-sensible' "Sensible defaults
 Plug 'tpope/vim-surround' "Surround pairs
 Plug 'janko-m/vim-test' "Test
 Plug 'bswinnerton/vim-test-github' "Test @ GitHub
-Plug 'vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
