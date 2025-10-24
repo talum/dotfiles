@@ -33,3 +33,6 @@
 [push]
         # See https://stackoverflow.com/questions/23918062/simple-vs-current-push-default-in-git-for-decentralized-workflow
         default = current
+[user]
+	email = "11878752+talum@users.noreply.github.com"
+	name = Tracy Lum
