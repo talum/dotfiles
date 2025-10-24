@@ -1,13 +1,16 @@
 #!/bin/bash
 
 ### Symlink dotfiles
-ln -sf $(pwd)/home/.* $HOME/
+for file in $(pwd)/home/.??*; do
+  ln -sf "$file" "$HOME/$(basename "$file")"
+done
 
 ### Install Plug and plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -es -u ~/.vimrc +PlugInstall +qa
 
 ### Install ctags
+brew install universal-ctags
 ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log .
 
 ### Install oh-my-zsh
@@ -20,4 +23,25 @@ fi
 if [ "$LOCAL" == TRUE ]
   echo "Installing tmux"
   then brew install tmux
+fi
+
+### Install nvm
+if [ "$LOCAL" == TRUE ]; then
+  echo "Installing nvm"
+
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+  # Load nvm into current shell session
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+  # Install latest LTS Node.js
+  nvm install --lts
+
+  # Set installed LTS as default
+  nvm alias default 'lts/*'
+
+  # Verify installation
+  node -v
+  npm -v
 fi
